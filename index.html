@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title> Mavis' Portfolio for 228</title>
+
+    <!-- sans serif font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!-- mono font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+
+    <!-- gradients made with help of claude-->
+    <!-- nav pill made with the help of claude for blur effects -->
+    <style>
+      html {
+        font-size: 16px
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .page {
+        width: 1440px;
+        height: 926px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, #e8e8e8 0%, #d4d4d4 50%, #c9b5a0 100%);
+        overflow: hidden
+      }
+
+      .content-container {
+        width: 1200px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 40px;
+        z-index: 1
+      }
+
+      .orange-gradient {
+        position: absolute;
+        bottom: -100px;
+        right: -200px;
+        filter: blur(200px);
+        border-radius: 50%;
+        background-color: rgba(204, 138, 94, 0.5);
+        width: 800px;
+        height: 500px;
+        pointer-events: none;
+      }
+
+      .blue-gradient {
+        position: absolute;
+        bottom: 0;
+        left: -200px;
+        filter: blur(300px);
+        border-radius: 50%;
+        background-color: rgba(98, 144, 230, 0.7);
+        width: 900px;
+        height: 400px;
+        pointer-events: none;
+      }
+
+      .nav-pill {
+        border-radius: 100px;
+        background-color: rgba(240, 241, 245, 0.9);
+        backdrop-filter: blur(10px);
+        padding: 12px 36px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        display: inline-block;
+        opacity: 0.8;
+      }
+
+      .nav-pos {
+        display: flex;
+        gap: 63px;
+      }
+
+      .nav-item {
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      .nav-item:hover {
+        opacity: 0.5;
+      }
+
+      h1 {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 8em;
+        font-weight: 500;
+        color: #0A0F15;
+        letter-spacing: -0.07em;
+      }
+
+      h6 {
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #0A0F15;
+        letter-spacing: -0.07em;
+      }
+
+      .description {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 1.25em;
+        letter-spacing: -0.03em;
+        line-height: 1.6;
+        color: #222631;
+        max-width: 700px
+      }
+
+      .description-light {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 1.25em;
+        letter-spacing: -0.03em;
+        line-height: 1.6;
+        color: #6a7588;
+        max-width: 700px
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <div class="page">
+      <div class="orange-gradient"></div>
+      <div class="blue-gradient"></div>
+      <div class="content-container ">
+
+
+        <h1>hi i'm mavis</h1>
+        <div class="nav-pill">
+          <div class="nav-pos">
+
+            <div class="nav-item">
+              <h6>works</h6>
+            </div>
+
+            <div class="nav-item">
+              <h6>playground</h6>
+            </div>
+
+            <div class="nav-item">
+              <h6>about</h6>
+            </div>
+
+            <div class="nav-item">
+              <h6>contact</h6>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="description">
+          A designer who wants to create unexpectedly good experiences. Specializing in product and brand identity design while dabbling in everything.
+        </div>
+        <div class="description-light">Currently designing @envgo</div>
+
+
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>
