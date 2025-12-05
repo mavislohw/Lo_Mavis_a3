@@ -50,7 +50,12 @@
 
       }
 
-     
+      .about-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
 
       /* nav --------------------------------------------------------------------*/
 
@@ -154,29 +159,35 @@
 
 
 
-      /* works--------------------------------------------------------------------*/
+      /* about text--------------------------------------------------------------------*/
 
-      .works-title {
+      .-title {
         gap: 40 px;
         text-align: left;
         padding: 80px 0 0 0;
       }
 
-      .project-title {
+      .content-section {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        margin-bottom: 80px;
+      }
+      
+      .text-block {
+        background: #FFFFFF;
+        opacity: 0.4;
+        padding: 40px 50px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+      }
+      
+      .text-block p{
+        line-height: 1.6;
+        margin-bottom: 20px;
         text-align: left;
-        padding-bottom: 12px;
-        border-bottom: 2px solid #0A0F15;
+        
       }
-
-      .project-divider {
-        height: 2px;
-        background: #0A0F15;
-      }
-
-      .project-description {
-        text-align: left;
-      }
-
       /* typography--------------------------------------------------------------------*/
       h1 {
         font-family: "Inter", sans-serif;
@@ -366,7 +377,20 @@
           </nav>
 
         </header>
-        <h1 class="works-title">about</h1>
+        
+        
+        <h1 class="title">about</h1>
+
+        <div class="content-section">
+                    <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat">
+<div class="text-lock">
+  <p>Like every “art” kid, I grew up scribbling on walls. By the time I moved out of my childhood home, you could see scribbles all over our hallways (yes it was a pain to paint over, trust me).</p>
+  
+          </div>
+        
+        
+        
+        </div>
        
         
         
