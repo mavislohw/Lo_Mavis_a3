@@ -171,7 +171,7 @@
 
 
 
-      /* works--------------------------------------------------------------------*/
+      /* title--------------------------------------------------------------------*/
 
       .title {
         gap: 40 px;
@@ -179,15 +179,90 @@
         padding: 80px 0 0 0;
       }
 
-   
+      /* playground--------------------------------------------------------------------*/
+
+      .playground-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .grid-title {
+        text-align: left;
+      }
+
+      .grid-item {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        padding-bottom: 100%;
+        border-radius: 6px;
+        background: #D7D7D7;
+        overflow: hidden;
+      }
+
+      .grid-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .grid-item:hover {
+        opacity: 0.85;
+      }
+
+      /* made with the help of chatgpt--------------------------------------------------------------------*/
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-box {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 700px;
+        max-width: 80%;
+        position: relative;
+        text-align: center;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
 
       /* typography--------------------------------------------------------------------*/
+
       h1 {
         font-family: "Inter", sans-serif;
         font-size: 8em;
         font-weight: 600;
         color: #0A0F15;
         letter-spacing: -0.06em;
+      }
+
+
+      h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 4em;
+        font-weight: 400;
+        color: #0A0F15;
+        letter-spacing: -0.04em;
       }
 
       h3 {
@@ -217,7 +292,6 @@
         letter-spacing: -0.07em;
       }
 
-     
 
       /* footer image--------------------------------------------------------------------*/
 
@@ -312,8 +386,7 @@
   </head>
 
 
-
-
+ 
   <!-- body -->
 
   <body>
@@ -352,13 +425,74 @@
               </li>
             </ul>
           </nav>
-
         </header>
-        <h1 class="title">a lil about me</h1>
-     
+
+        <h1 class="title">Playground</h1>
+
+
+
+        <!-- playground grid -->
+        <div id="playground">
+
+          <h2 class="grid-title">Graphic Design</h2>
+          <div class="playground-grid">
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+          </div>
+
+          <h2 class="grid-title">Illustration</h2>
+          <div class="playground-grid">
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+          </div>
+
+
+          <h2 class="grid-title">Photography</h2>
+          <div class="playground-grid">
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+          </div>
+
+
+          <h2 class="grid-title">Traditional Art</h2>
+          <div class="playground-grid">
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+            <div class="grid-item"> <img src="placeholder.png" alt="Bahn Mi, a sandwich with cilantro, carrots, radish and meat"></div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- MODAL POP UP assisted by CHATGPT -->
+        <div class="modal-overlay" id="modal">
+          <div class="modal-box">
+            <button class="modal-close" id="closeModal">✕</button>
+
+            <!-- NEW: modal image -->
+            <img id="modalImage" src="placeholder.png" alt="Expanded project image" style="width:100%; border-radius:8px; margin-bottom:15px;">
+
+
+
+
+
+            <h3>Project Preview</h3>
+            <p>This is a placeholder popup. Replace with your project info!</p>
+          </div>
+        </div>
+
 
         <footer>
-
           <img src="plane.png" alt="black paper plane overlaid on top of a wavy line" class="footer-bg">
           <div class="footer-content">
             <div class="footer-title-box">
@@ -378,6 +512,33 @@
       </div>
     </div>
 
+    
+     <script>
+      // Get modal elements
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const closeModal = document.getElementById("closeModal");
+
+      // Add click event to all grid item images
+      document.querySelectorAll(".grid-item img").forEach(img => {
+        img.addEventListener("click", () => {
+          modalImage.src = img.src;
+          modal.style.display = "flex";
+        });
+      });
+
+      // Close modal when X is clicked
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      // Close modal when clicking outside the modal box
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
   </body>
 
 </html>
