@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8">
+    <title> Mavis' Portfolio for 228</title>
+
+    <!-- font reference -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+
+    <!-- GEN AI statement used Claude in 3 ways
+    1: to create gradient 
+     2: debugging by copying my code and saying "please debug thsi for me"
+      3: implementing footer design by inputting photo of my mockup and trial code i have-->
+    <style>
+      html {
+        font-size: 16px
+      }
+
+      /* page setup--------------------------------------------------------------------*/
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .page {
+        width: 1440px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background: #EAEAEA;
+        overflow: hidden
+      }
+
+      .content-container {
+        width: 1200px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 100px;
+
+      }
+
+     
+
+      /* nav --------------------------------------------------------------------*/
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+      }
+
+      .logo {
+        font-size: 36px;
+        font-weight: 600;
+        color: #0A0F15;
+        letter-spacing: -0.06em;
+      }
+
+
+      nav {
+        padding: 12px 36px;
+        display: inline-block;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline-block;
+      }
+
+      nav ul li a {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        text-decoration: none;
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #0A0F15;
+        letter-spacing: -0.02em;
+        transition: opacity 0.3s;
+        cursor: pointer;
+      }
+
+      nav ul li a:hover {
+        opacity: 0.5;
+      }
+
+      /* Navigation Icon Images */
+      nav ul li a img {
+        width: 20px;
+        height: 20px;
+        opacity: 0.7;
+      }
+
+
+
+      /* background --------------------------------------------------------------------*/
+
+      .orange-gradient {
+        position: absolute;
+        top: -100px;
+        left: -200px;
+        filter: blur(200px);
+        border-radius: 50%;
+        background-color: #CC8A5E;
+        width: 800px;
+        height: 500px;
+        pointer-events: none;
+      }
+
+      .blue-gradient {
+        position: absolute;
+        top: 0;
+        right: -100px;
+        filter: blur(200px);
+        border-radius: 50%;
+        background-color: #6290E6;
+        width: 1000px;
+        height: 400px;
+        pointer-events: none;
+      }
+
+      .pink-gradient {
+        position: absolute;
+        top: 300px;
+        right: -100px;
+        filter: blur(200px);
+        border-radius: 50%;
+        background-color: #F0BDBE;
+        width: 1000px;
+        height: 400px;
+        pointer-events: none;
+      }
+
+
+
+      /* works--------------------------------------------------------------------*/
+
+      .works-title {
+        gap: 40 px;
+        text-align: left;
+        padding: 80px 0 0 0;
+      }
+
+      .project-title {
+        text-align: left;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #0A0F15;
+      }
+
+      .project-divider {
+        height: 2px;
+        background: #0A0F15;
+      }
+
+      .project-description {
+        text-align: left;
+      }
+
+      /* typography--------------------------------------------------------------------*/
+      h1 {
+        font-family: "Inter", sans-serif;
+        font-size: 8em;
+        font-weight: 600;
+        color: #0A0F15;
+        letter-spacing: -0.06em;
+      }
+
+      h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 2em;
+        font-weight: 500;
+        color: #0A0F15;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        font-family: "Inter", sans-serif;
+        font-size: 1.25em;
+        letter-spacing: -0.04em;
+        line-height: 1.2;
+        color: #222631;
+        max-width: 700px;
+        border-top: 1px;
+      }
+
+
+      h6 {
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #0A0F15;
+        letter-spacing: -0.07em;
+      }
+
+      .description {
+        font-family: "Inter", sans-serif;
+        font-size: 1.25em;
+        letter-spacing: -0.05em;
+        line-height: 1.5;
+        color: #222631;
+        max-width: 700px
+      }
+
+      .description-light {
+        font-family: "Inter", sans-serif;
+        font-size: 1.25em;
+        letter-spacing: -0.05em;
+        line-height: 1.6;
+
+        max-width: 700px
+      }
+
+      /* footer image--------------------------------------------------------------------*/
+
+      footer {
+        margin-top: 120px;
+        position: relative;
+        padding-bottom: 60px;
+        height: 500px;
+      }
+
+      .footer-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 120px;
+      }
+
+      .footer-title-box {
+        background: #9BB1DA;
+        padding: 20px 60px;
+        transform: rotate(-10deg);
+        margin-bottom: 35px;
+        position: absolute;
+        left: 300px;
+      }
+
+      .footer-title {
+        font-family: "Inter", sans-serif;
+        font-size: 5.5em;
+        font-weight: 700;
+        color: #0A0F15;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      .footer-button {
+        background: #0A0F15;
+        color: #F0F1F5;
+        padding: 12px 45px;
+        border-radius: 30px;
+        border: none;
+        font-family: "Space Grotesk", monospace;
+        font-size: 1em;
+        font-weight: 500;
+        cursor: pointer;
+        transition: transform 0.2s;
+        transform: rotate(10deg);
+        margin-bottom: 35px;
+        position: absolute;
+        right: 300px;
+        top: 300px;
+      }
+
+      .footer-button:hover {
+        transform: scale(1.05);
+      }
+
+      .footer-links {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 80px;
+      }
+
+      .footer-links a {
+        font-family: "Space Grotesk", monospace;
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #0A0F15;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        transition: opacity 0.3s;
+      }
+
+      .footer-links a:hover {
+        opacity: 0.5;
+      }
+
+
+      .footer-bg {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+    </style>
+  </head>
+
+
+
+
+  <!-- body -->
+
+  <body>
+    <div class="page">
+      <div class="orange-gradient"></div>
+      <div class="blue-gradient"></div>
+      <div class="pink-gradient"></div>
+      <div class="content-container ">
+        <header>
+          <h3 class="logo">Mavis Lo</h3>
+          <nav>
+            <ul>
+              <li>
+                <a href="works.html">
+                  <img src="Folder.svg" alt="Outline icon of a laptop folder">
+                  works
+                </a>
+              </li>
+              <li>
+                <a href="playground.html">
+                  <img src="Planet.svg" alt="Outline icon of Saturn, planet with ring around it">
+                  playground
+                </a>
+              </li>
+              <li>
+                <a href="about.html">
+                  <img src="User_02.svg" alt="Outline icon of a person, upper body">
+                  about
+                </a>
+              </li>
+              <li>
+                <a href="mailto:mavis.lohw@gmail.com">
+                  <img src="Mail.svg" alt="Outline icon of an envelope">
+                  contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </header>
+        <h1 class="works-title">about</h1>
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <footer>
+
+          <img src="plane.png" alt="black paper plane overlaid on top of a wavy line" class="footer-bg">
+          <div class="footer-content">
+            <div class="footer-title-box">
+              <h2 class="footer-title">meant to be?</h2>
+            </div>
+            <button class="footer-button">send a message</button>
+          </div>
+
+          <div class="footer-links">
+            <a href="#">resume. pdf</a>
+            <a href="#">linkedin</a>
+          </div>
+
+
+        </footer>
+
+      </div>
+    </div>
+
+  </body>
+
+</html>
