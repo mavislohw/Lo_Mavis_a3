@@ -12,15 +12,15 @@
 
     <!-- GEN AI statement used Claude in 3 ways
     1: to create gradient 
-     2: debugging by copying my code and saying "please debug thsi for me"
-      3: implementing footer design by inputting photo of my mockup and trial code i have-->
+     2: debugging by copying my code and saying "please debug this for me" and inputting my code
+      3: implementing footer design by inputting photo of my mockup and trial code i have
+4. trouble shooting image links and hover-->
     <style>
       html {
         font-size: 16px
       }
 
       /* page setup--------------------------------------------------------------------*/
-
       * {
         margin: 0;
         padding: 0;
@@ -64,10 +64,7 @@
         margin-bottom: 24px;
       }
 
- 
-
       /* nav --------------------------------------------------------------------*/
-
       header {
         display: flex;
         justify-content: space-between;
@@ -81,7 +78,6 @@
         color: #0A0F15;
         letter-spacing: -0.06em;
       }
-
 
       nav {
         padding: 12px 36px;
@@ -126,7 +122,6 @@
       }
 
       /* background --------------------------------------------------------------------*/
-
       .orange-gradient {
         position: absolute;
         top: -100px;
@@ -163,16 +158,12 @@
         pointer-events: none;
       }
 
-
-
       /* works--------------------------------------------------------------------*/
-
       .works-title {
-        gap: 40 px;
         text-align: left;
         padding: 80px 0 0 0;
       }
-      
+
       .grid-container img {
         width: 100%;
         height: 350px;
@@ -195,16 +186,17 @@
       .project-description {
         text-align: left;
       }
-      
-      
+
+
       .project-link {
         display: block;
         cursor: pointer;
       }
-      
-      .project-link:hover img{
-       opacity: 0.7;
+
+      .project-link:hover img {
+        opacity: 0.7;
       }
+
       /* typography--------------------------------------------------------------------*/
       h1 {
         font-family: "Inter", sans-serif;
@@ -229,9 +221,7 @@
         line-height: 1.2;
         color: #222631;
         max-width: 700px;
-        border-top: 1px;
       }
-
 
       h6 {
         font-family: "Space Grotesk", monospace;
@@ -260,7 +250,6 @@
       }
 
       /* footer image--------------------------------------------------------------------*/
-
       footer {
         margin-top: 120px;
         position: relative;
@@ -311,6 +300,8 @@
         position: absolute;
         right: 300px;
         top: 300px;
+        text-decoration: none;
+        display: inline-block;
       }
 
       .footer-button:hover {
@@ -340,7 +331,6 @@
         opacity: 0.5;
       }
 
-
       .footer-bg {
         position: absolute;
         left: 50%;
@@ -361,7 +351,7 @@
       <div class="orange-gradient"></div>
       <div class="blue-gradient"></div>
       <div class="pink-gradient"></div>
-      <div class="content-container ">
+      <div class="content-container">
         <header>
           <h3 class="logo">Mavis Lo</h3>
           <nav>
@@ -400,8 +390,8 @@
           <!-- proj 1 Flock -->
           <div>
             <a href="https://www.figma.com/proto/j9D3eKtuHbCAtKcyqOpMaG/Canvas-2025?page-id=7%3A791&node-id=7-1507&starting-point-node-id=7%3A1507&t=sdtBG0dsrKVw0nSd-1" class="project-link">
-            <img src="flock.png" alt="Flock, an app where mentor can connect with mentees in brief moments and chats, chicken mascot">
-              </a>
+              <img src="flock.png" alt="Flock, an app where mentor can connect with mentees in brief moments and chats, chicken mascot">
+            </a>
             <h3 class="project-title">Flock</h3>
             <p class="project-description">How might we create a system that delivers real mentorship in digestible, impactful moments while creating community?</p>
           </div>
@@ -409,17 +399,17 @@
           <!-- proj 2 Rentify-->
           <div>
             <a href="https://www.figma.com/proto/zIrgOMqAODB9PCY2VNWfH3/210-High-Fidelity?page-id=0%3A1&node-id=135-339&p=f&viewport=363%2C433%2C0.14&t=hjunuHioCjZTMS7G-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=14%3A7" class="project-link">
-            <img src="rentify.jpg" alt="Rentify project, a Waterloo student housing platform mobile app">
-              </a>
+              <img src="rentify.jpg" alt="Rentify project, a Waterloo student housing platform mobile app">
+            </a>
             <h3 class="project-title">Rentify</h3>
             <p class="project-description">How might we redesign the housing process in Waterloo in a way that supports and creates a safe, transparent experience for student renters?</p>
           </div>
 
           <!-- proj 3 NBD in the NBL-->
           <div>
-            <a href="https://www.figma.com/proto/jRLsgzDW3mOFFY5xXGmoAh/NASA-Screens?page-id=0%3A1&node-id=8-2&t=ud3AXDHvMe5wYS7z-1">
+            <a href="https://www.figma.com/proto/jRLsgzDW3mOFFY5xXGmoAh/NASA-Screens?page-id=0%3A1&node-id=8-2&t=ud3AXDHvMe5wYS7z-1" class="peoject-link">
 
-            <img src="nbd.png" alt="A cover page for an interactive game that simulates what it is like being an astronaut, game title is 'NBD in the NBL'">
+              <img src="nbd.png" alt="A cover page for an interactive game that simulates what it is like being an astronaut, game title is 'NBD in the NBL'">
             </a>
             <h3 class="project-title">NBD in the NBL</h3>
             <p class="project-description">Simulating weightlessness and the sights of space through an interactive and narrative game. </p>
@@ -427,31 +417,29 @@
 
           <!-- proj 4 Tao Tea Leaf -->
           <div>
-            <a href="#">
-            <img src="tao.png" alt="a redesigned box with new branding, minimalist tao logo, sitting on top of a hill with moss and flowers">
+            <a href="https://drive.google.com/file/d/1IotWOWNjBCTe2_oiQA6N5XYaO_vZDmXD/view?usp=sharing">
+              <img src="tao.png" alt="a redesigned box with new branding, minimalist tao logo, sitting on top of a hill with moss and flowers">
+            </a>
+
             <h3 class="project-title">Tao Tea Leaf</h3>
-              </a>
             <p class="project-description">Full rebrand from logo to social media campaigns. Elevating brand status and modernizing all assets.
             </p>
           </div>
         </div>
 
         <footer>
-
           <img src="plane.png" alt="black paper plane overlaid on top of a wavy line" class="footer-bg">
           <div class="footer-content">
             <div class="footer-title-box">
               <h2 class="footer-title">meant to be?</h2>
             </div>
-            <button class="footer-button">send a message</button>
+            <a href="mailto:mavislohw@gmail.com" class="footer-button">send a message</a>
           </div>
 
           <div class="footer-links">
-            <a href="#">resume. pdf</a>
-            <a href="#">linkedin</a>
+            <a href="https://docs.google.com/document/d/1RS4gErXa_6IWpA2rzEXdhlADZYMOpyIXkZ3VM0wmtHo/edit?usp=sharing">resume. pdf</a>
+            <a href="https://www.linkedin.com/in/mavis-lo/">linkedin</a>
           </div>
-
-
         </footer>
 
       </div>
